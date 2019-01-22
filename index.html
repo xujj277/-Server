@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h5>你的余额是 <span id="amount">100</span></h5>
+  <button id="button">付款1元</button>
+  <script>
+    button.addEventListener('click', (e) => {
+      let n = amount.innerText
+      let number = n - 0
+      let newNumber = number - 1
+      amount.innerText = newNumber
+    })
+  </script>
+  <script src="/main.js?callback=xxx"></script>
+</body>
+</html>

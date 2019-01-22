@@ -10,7 +10,7 @@ if(!port){
 
 var server = http.createServer(function(request, response){
   var parsedUrl = url.parse(request.url, true)
-  var pathWithQuery = request.url 
+  var pathWithQuery = request.url
   var queryString = ''
   if(pathWithQuery.indexOf('?') >= 0){ queryString = pathWithQuery.substring(pathWithQuery.indexOf('?')) }
   var path = parsedUrl.pathname
@@ -18,30 +18,27 @@ var server = http.createServer(function(request, response){
   var method = request.method
 
   /******** 从这里开始看，上面不要看 ************/
-
-  console.log('HTTP 路径为\n' + path)
-  if(path == '/style.css'){
-    response.setHeader('Content-Type', 'text/css; charset=utf-8')
-    response.write('body{background-color: #ddd;}h1{color: red;}')
+  if (path === '/') {
+    var string = fs.readFileSync('./index.html', 'utf8')
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write(string)
     response.end()
-  }else if(path == '/main.js'){
-    response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
-    response.write('alert("这是JS执行的")')
+  } else if (path === '/style.css') {
+    var string = fs.readFileSync('./style.css', 'utf8')
+    response.setHeader('Content-Type', 'text/css')
+    response.write(string)
     response.end()
-  }else if(path == '/'){
-    response.setHeader('Content-Type', 'text/html; charset=utf-8')
-    response.write('<!DOCTYPE>\n<html>'  + 
-      '<head><link rel="stylesheet" href="/style.css">' +
-      '</head><body>'  +
-      '<h1>你好</h1>' +
-      '<script src="/main.js"></script>' +
-      '</body></html>')
+  } else if (path === '/main.js') {
+    var string = fs.readFileSync('./main.js', 'utf8')
+    response.setHeader('Content-Type', 'application/javascript')
+    response.write(string)
     response.end()
-  }else{
+  } else {
     response.statusCode = 404
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write('找不到对应的路径，你需要自行修改 index.js')
     response.end()
   }
-
   /******** 代码结束，下面不要看 ************/
 })
 
