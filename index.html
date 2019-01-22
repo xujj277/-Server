@@ -17,9 +17,11 @@
       image.src = '/pay'
       image.onload = function () {
         alert('success')
+        amount.innerText = amount.innerText - 1
       }
       image.onerror = function () {
         alert('fail')
+
       }
     })
   </script>
