@@ -42,9 +42,8 @@ var server = http.createServer(function(request, response){
       fs.writeFileSync('./db', newAmount)
       response.setHeader('Content-Type', 'application/javascript')
       response.statusCode = 200
-      response.write(`alert("success")
-      // 说明jack.com的后端程序员需要对xujinjun.com的页面非常了解
-        amount.innerText = amount.innerText - 1
+      response.write(`
+      ${query.callbackName}.call(undefined, 'success')
       `)
       response.end()
     } else {

@@ -12,9 +12,13 @@
   <h5>你的余额是 <span id="amount">&&&amount&&&</span></h5>
   <button id="button">打钱</button>
   <script>
+    window.xxx = function (result) {
+      alert('这是xujinjun写的前端代码')
+      alert(`我得到的结果是${result}`)
+    }
     button.addEventListener('click', (e) => {
       let script = document.createElement('script')
-      script.src = 'http://jack.com:8002/pay'
+      script.src = 'http://jack.com:8002/pay?callbackName=xxx'
       document.body.appendChild(script)
       script.onload = function (e) {
         e.currentTarget.remove()
