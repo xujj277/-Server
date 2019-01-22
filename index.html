@@ -13,15 +13,15 @@
   <button id="button">打钱</button>
   <script>
     button.addEventListener('click', (e) => {
-      let image = document.createElement('img')
-      image.src = '/pay'
-      image.onload = function () {
+      let script = document.createElement('script')
+      script.src = '/pay'
+      document.body.appendChild(script)
+      script.onload = function () {
         alert('success')
-        amount.innerText = amount.innerText - 1
-      }
-      image.onerror = function () {
-        alert('fail')
 
+      }
+      script.onerror = function () {
+        alert('fail')
       }
     })
   </script>
