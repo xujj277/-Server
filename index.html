@@ -14,7 +14,7 @@
   <script>
     button.addEventListener('click', (e) => {
       let script = document.createElement('script')
-      script.src = '/pay'
+      script.src = 'http://jack.com:8002/pay'
       document.body.appendChild(script)
       script.onload = function (e) {
         e.currentTarget.remove()
