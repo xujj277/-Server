@@ -9,16 +9,10 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h5>你的余额是 <span id="amount">100</span></h5>
-  <button id="button">付款1元</button>
-  <script>
-    button.addEventListener('click', (e) => {
-      let n = amount.innerText
-      let number = n - 0
-      let newNumber = number - 1
-      amount.innerText = newNumber
-    })
-  </script>
+  <h5>你的余额是 <span id="amount">&&&amount&&&</span></h5>
+  <form action="/pay" method="post">
+    <input type="submit" value="付款">
+  </form>
   <script src="/main.js?callback=xxx"></script>
 </body>
 </html>
