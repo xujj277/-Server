@@ -10,9 +10,10 @@
 </head>
 <body>
   <h5>你的余额是 <span id="amount">&&&amount&&&</span></h5>
-  <form action="/pay" method="post">
+  <form action="/pay" method="post" target="result">
     <input type="submit" value="付款">
   </form>
+  <iframe src="about:blank" frameborder="0" name="result" height="100"></iframe>
   <script src="/main.js?callback=xxx"></script>
 </body>
 </html>

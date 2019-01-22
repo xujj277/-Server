@@ -38,6 +38,11 @@ var server = http.createServer(function(request, response){
   } else if (path === '/pay' && method.toUpperCase() === 'POST') {
     var amount = fs.readFileSync('./db', 'utf8')
     var newAmount = amount - 1
+    if () {
+
+    } else {
+
+    }
     fs.writeFileSync('./db', newAmount)
     response.write('success')
     response.end()
