@@ -11,29 +11,16 @@
 <body>
   <h5>你的余额是 <span id="amount">&&&amount&&&</span></h5>
   <button id="button">打钱</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     button.addEventListener('click', (e) => {
-      let script = document.createElement('script')
-      let functionName = 'xujinjun' + parseInt(Math.random()*10000, 10)
-
-      window[functionName] = function (result) {
-        if (result === 'success') {
-          amount.innerText -= 1
-        } else {
-
+      $.ajax({
+        url: "http://jack.com:8002/pay",
+        dataType: "jsonp",
+        success: function( response ) {
+          console.log( response ); // server response
         }
-      }
-      script.src = 'http://jack.com:8002/pay?callback' + functionName
-      document.body.appendChild(script)
-      script.onload = function (e) {
-        e.currentTarget.remove()
-        delete window[functionName]
-      }
-      script.onerror = function () {
-        alert('fail')
-        e.currentTarget.remove()
-        delete window[functionName]
-      }
+      });
     })
   </script>
   <script src="/main.js?callback=xxx"></script>
