@@ -35,12 +35,14 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/xml')
     response.write(`
-      <note>
-        <to>George</to>
-        <from>John</from>
-        <heading>Reminder</heading>
-        <body>Don't forget the meeting!</body>
-      </note>
+      {
+        "note": {
+          "to": "jack",
+          "from": "xjj",
+          "heading": "打招呼",
+          "content": "hi"
+        }
+      }
     `)
     response.end()
   }else{
