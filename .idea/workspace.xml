@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="478a66fa-c3d8-414b-9db0-43e196d0402e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-    </list>
+    <list default="true" id="478a66fa-c3d8-414b-9db0-43e196d0402e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,16 +10,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="36" column="93" selection-start-line="36" selection-start-column="93" selection-end-line="36" selection-end-column="93" />
+            <state relative-caret-position="24">
+              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -59,7 +55,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
+    <option name="x" value="119" />
     <option name="y" value="52" />
     <option name="width" value="1153" />
     <option name="height" value="1027" />
@@ -131,15 +127,15 @@
       <workItem from="1547564693738" duration="7000" />
       <workItem from="1548087948763" duration="1920000" />
       <workItem from="1548099151049" duration="20976000" />
-      <workItem from="1548185854134" duration="9439000" />
+      <workItem from="1548185854134" duration="9847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33282000" />
+    <option name="totallyTimeSpent" value="33690000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="52" width="1153" height="1027" extended-state="0" />
+    <frame x="119" y="52" width="1153" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.19967663" />
@@ -207,17 +203,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="93" selection-start-line="36" selection-start-column="93" selection-end-line="36" selection-end-column="93" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,7 @@
 myButton.addEventListener('click', (e) => {
   let request = new XMLHttpRequest()
+  request.open('GET', 'http://jack.com:8002/xxx') // 配置request
+  request.send()
   request.onreadystatechange = () => { // 监听状态
     if (request.readyState === 4) { // 判断状态是否完成
       if (request.status === 200) {
@@ -11,6 +13,4 @@ myButton.addEventListener('click', (e) => {
       }
     }
   }
-  request.open('GET', 'http://jack.com:8002/xxx') // 配置request
-  request.send()
 })
