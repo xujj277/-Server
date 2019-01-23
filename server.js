@@ -33,7 +33,8 @@ var server = http.createServer(function(request, response){
     response.end()
   }else if (path === '/xxx') {
     response.statusCode = 200
-    response.setHeader('Content-Type', 'text/xml')
+    response.setHeader('Content-Type', 'text/json;charset=utf-8')
+    response.setHeader('Access-Control-Allow-Origin', 'http://xujinjun.com:8001') // CORS解决同源
     response.write(`
       {
         "note": {

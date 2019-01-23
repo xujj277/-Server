@@ -5,11 +5,12 @@ myButton.addEventListener('click', (e) => {
       if (request.status === 200) {
         let string = request.responseText
         let object = window.JSON.parse(string) // 把符合JSON语法的字符串转换成JS对象
+        console.log(object)
       } else if (request.status >= 400) {
         console.log('fail')
       }
     }
   }
-  request.open('GET', '/xxx') // 配置request
+  request.open('GET', 'http://jack.com:8002/xxx') // 配置request
   request.send()
 })
