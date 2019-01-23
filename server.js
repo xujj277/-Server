@@ -10,7 +10,7 @@ if(!port){
 
 var server = http.createServer(function(request, response){
   var parsedUrl = url.parse(request.url, true)
-  var pathWithQuery = request.url 
+  var pathWithQuery = request.url
   var queryString = ''
   if(pathWithQuery.indexOf('?') >= 0){ queryString = pathWithQuery.substring(pathWithQuery.indexOf('?')) }
   var path = parsedUrl.pathname
@@ -19,26 +19,22 @@ var server = http.createServer(function(request, response){
 
   /******** 从这里开始看，上面不要看 ************/
 
-  console.log('HTTP 路径为\n' + path)
-  if(path == '/style.css'){
-    response.setHeader('Content-Type', 'text/css; charset=utf-8')
-    response.write('body{background-color: #ddd;}h1{color: red;}')
+  if(path == '/'){
+    let string = fs.readFileSync('./index.html', 'utf-8')
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write(string)
     response.end()
-  }else if(path == '/main.js'){
-    response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
-    response.write('alert("这是JS执行的")')
-    response.end()
-  }else if(path == '/'){
-    response.setHeader('Content-Type', 'text/html; charset=utf-8')
-    response.write('<!DOCTYPE>\n<html>'  + 
-      '<head><link rel="stylesheet" href="/style.css">' +
-      '</head><body>'  +
-      '<h1>你好</h1>' +
-      '<script src="/main.js"></script>' +
-      '</body></html>')
+  }else if (path === '/main.js') {
+    let string = fs.readFileSync('./main.js', 'utf-8')
+    response.statusCode = 200
+    response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
+    response.write(string)
     response.end()
   }else{
     response.statusCode = 404
+    response.setHeader('Content-Type', 'text/html;charset=utf-8')
+    response.write('wuwuwu')
     response.end()
   }
 
